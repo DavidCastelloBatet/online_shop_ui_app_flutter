@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_ui_app_flutter/constants.dart';
+import 'package:online_shop_ui_app_flutter/models/Product.dart';
 import 'package:online_shop_ui_app_flutter/screens/home/components/categories.dart';
+
+import 'item_card.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -21,9 +24,8 @@ class Body extends StatelessWidget {
           ),
         ),
         Categories(),
+        ItemCard(),
       ],
     );
   }
 }
-
-// Statefull widget para las categorias
