@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_ui_app_flutter/constants.dart';
 import 'package:online_shop_ui_app_flutter/models/Product.dart';
+import 'package:online_shop_ui_app_flutter/screens/detail/components/color_and_size.dart';
 import 'package:online_shop_ui_app_flutter/screens/detail/components/product_title_with_image.dart';
+
+import 'color_dot.dart';
 
 class Body extends StatelessWidget {
   final Product product;
@@ -19,7 +22,12 @@ class Body extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
-                  height: 500.0,
+                  padding: EdgeInsets.only(
+                    top: size.height * 0.12,
+                    left: kDefaultPadding,
+                    right: kDefaultPadding,
+                  ),
+                  //height: 500.0,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -27,6 +35,7 @@ class Body extends StatelessWidget {
                       topRight: Radius.circular(24),
                     ),
                   ),
+                  child: ColorAndSize(product: product),
                 ),
                 ProductTitleWithImage(product: product)
               ],
