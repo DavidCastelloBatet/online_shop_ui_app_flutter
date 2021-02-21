@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:online_shop_ui_app_flutter/constants.dart';
 import 'package:online_shop_ui_app_flutter/models/Product.dart';
 import 'package:online_shop_ui_app_flutter/screens/detail/components/color_and_size.dart';
+import 'package:online_shop_ui_app_flutter/screens/detail/components/description.dart';
 import 'package:online_shop_ui_app_flutter/screens/detail/components/product_title_with_image.dart';
 
 import 'color_dot.dart';
@@ -35,7 +36,12 @@ class Body extends StatelessWidget {
                       topRight: Radius.circular(24),
                     ),
                   ),
-                  child: ColorAndSize(product: product),
+                  child: Column(
+                    children: <Widget>[
+                      ColorAndSize(product: product),
+                      Description(product: product),
+                    ],
+                  ),
                 ),
                 ProductTitleWithImage(product: product)
               ],
